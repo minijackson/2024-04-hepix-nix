@@ -11,7 +11,9 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
     in
       pkgs.mkShell {
-        packages = with pkgs; [typst libertinus];
+        packages = with pkgs; [typst];
+
+        env.TYPST_FONT_PATHS = "${pkgs.libertinus}/share/fonts/opentype:${pkgs.fira-code}/share/fonts/truetype";
       };
   };
 }
