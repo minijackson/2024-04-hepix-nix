@@ -1,5 +1,6 @@
 #import "@preview/polylux:0.3.1": *
 #import "@preview/pinit:0.1.3": *
+#import "@preview/tiaoma:0.2.0": qrcode
 
 #import "./theme.typ": *
 
@@ -13,6 +14,7 @@
 		with Nix and NixOS
 	],
 	author: [Rémi NICOLE],
+	subtitle: [CEA/DRF/IRFU/DIS/LDISC],
 )
 
 #slide[
@@ -22,6 +24,30 @@
 	Matthiew Croughan, and his SCaLE talks
 ]
 
+#let slides = "https://github.com/minijackson/2024-04-hepix-nix"
+
+#slide[
+	== Demos?
+
+	They are here:#footnote(link(slides))
+
+	#qrcode(slides, options: (scale: 3.0))
+]
+
+#let install-flakes = "https://wiki.nixos.org/wiki/Flakes#Other_Distros,_without_Home-Manager"
+
+#slide[
+	== Note on experimental features
+
+	They simplify my life,
+	they are _not_ needed.
+
+	If you want to test the demos,
+	enable the `flakes` experimental feature#footnote(link(install-flakes))
+
+	#qrcode(install-flakes, options: (scale: 3.0))
+]
+
 #section-slide[= Convincing you]
 
 #slide[
@@ -29,12 +55,13 @@
 
 	- Infrastructure as code
 	- Reproducibility
-	- Software supply chain security
+	- Software supply chain security (SLSA)
 	- Software Bill of Materials (SBOM)
 ]
 
 #slide(figure(image("map_repo_size_fresh.svg", height: 100%)))
 #slide(align(horizon, figure(image("tweet.png", height: 70%))))
+#slide(align(horizon, figure(image("standards.png", height: 40%), caption: [xkcd \#97 --- Standards])))
 
 #section-slide[= Concepts]
 
