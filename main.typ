@@ -71,30 +71,71 @@
 
 #section-slide[= Demos]
 
-#section-slide(background: colors.glycine)[== Nix]
-#section-slide(background: colors.archipel)[=== Reproducible dev env]
-#section-slide(background: colors.archipel)[=== Reproducible packages]
-#section-slide(background: colors.archipel)[=== On Debian?]
-#section-slide(background: colors.archipel)[=== Reproducible Docker images]
+#slide[
+	== Nix
 
-#section-slide(background: colors.glycine)[== NixOS]
-#section-slide(background: colors.archipel)[=== Declarative configuration]
-#section-slide(background: colors.archipel)[=== Build Docker images and more]
-#section-slide(background: colors.archipel)[=== Build VMs]
-#section-slide(background: colors.archipel)[=== Rollbacks]
-#section-slide(background: colors.archipel)[=== Offline machines]
-#section-slide(background: colors.archipel)[
-	=== NixOS tests
+	- Reproducible dev env // 1 min
+	- Reproducible packages // 2 min
+	- On Debian // 1 min
+	- Reproducible Docker images // 2 min
+]
+
+// -> 6 min
+
+#slide[
+	== NixOS
+
+	- Declarative configuration // 1 min
+	- Rollbacks // 1 min
+	- Build VMs // 2 min
+	- Build Docker images and more // 1 min
+	- Offline machines // 2 min
+]
+
+#slide[
+	== NixOS tests
 
 	Cool VM tests:
 
-	- Test of openarena
-	- Test of transmission
-]
+	- Test of OpenArena
+	- BitTorrent test
+] // 3 min
+
+// -> 10 min
 
 #section-slide[= Software supply chain]
 
-#section-slide(background: colors.glycine)[== Nice projects]
-#section-slide(background: colors.archipel)[=== PPC64BE-ELFv2 netboot image, all in RAM]
+#slide[
+	== Advantages of Nix/NixOS
+
+	- Know all your dependencies
+	- Know all your _build_ dependencies
+	- Know metadata of all your dependencies
+		- Licenses
+		- Source provenance
+	- SLSA level 4 "for free"
+	- Fetch the source and patches of all your dependencies
+	- Reproducible (science!)
+]
+
+#slide[
+	== Nice projects
+
+	- nixos-hardware#footnote[https://github.com/NixOS/nixos-hardware]
+	- EPNix: EPICS + Nix#footnote[https://github.com/epics-extensions/EPNix/]
+	- PPC64BE-ELFv2 network boot images, all in RAM
+	- robotnix: Building Android images#footnote[https://github.com/danielfullmer/robotnix]
+	- nix-darwin#footnote[https://github.com/LnL7/nix-darwin]
+]
+
+#slide[
+	== More reading
+
+	- Nix The Planet - SCaLE 21x --- Matthew Croughan#footnote[https://www.youtube.com/watch?v=6Le0IbPRzOE]
+	- What Nix Can Do (Docker Can't) - SCaLE 20x --- Matthew Croughan#footnote[https://www.youtube.com/watch?v=6Le0IbPRzOE]
+	- Nix is a better Docker image builder than Docker's image builder --- Xe Iaso#footnote[https://xeiaso.net/talks/2024/nix-docker-build/]
+	- SLSA demo --- Tomberek#footnote[https://www.youtube.com/watch?v=dT0DGVbD-5M&t=985s]
+	- Own your CI with Nix --- Théophane Hufschmitt#footnote[https://fosdem.org/2024/schedule/event/fosdem-2024-2282-own-your-ci-with-nix/]
+]
 
 // vim: filetype=typst
