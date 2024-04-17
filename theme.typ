@@ -26,7 +26,7 @@
 	aspect-ratio: "16-9",
 	body,
 ) = {
-	set text(size: 23pt, font: "Libertinus Serif")
+	set text(size: 22pt, font: "Libertinus Serif")
 	show raw: set text(font: "Fira Code")
 
 	set page(
@@ -76,9 +76,7 @@
 		},
 	)
 
-	logic.polylux-slide({
-		body
-	})
+	logic.polylux-slide(body)
 }
 
 #let section-slide(background: colors.blue, foreground: white, body) = {
