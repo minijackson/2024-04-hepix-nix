@@ -13,7 +13,7 @@ pdf:
   script:
     - nix develop $NIX_BUILD_FLAGS -i -c typst compile main.typ main.pdf
   artifacts:
-    name: "Convention de nommage EPICS pour TITAN.pdf"
+    name: "slides.pdf"
     paths:
       - main.pdf
   needs: []
