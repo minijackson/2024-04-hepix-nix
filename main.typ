@@ -158,7 +158,7 @@
 	- Know all your _build_ dependencies
 	- Know metadata of all your dependencies
 		- Licenses
-		- Source provenance
+		- Source provenance and patches
 	- SLSA level 4 "for free"
 	- Fetch the source and patches of all your dependencies
 	- Reproducible (science!)
@@ -179,7 +179,7 @@
 #slide[
 	== More reading
 
-	- Nix The Planet - SCaLE 21x --- Matthew Croughan#footnote[https://www.youtube.com/watch?v=6Le0IbPRzOE]
+	- Nix The Planet - SCaLE 21x --- Matthew Croughan#footnote[https://www.youtube.com/watch?app=desktop&v=6iviTZfiLGU]
 	- What Nix Can Do (Docker Can't) - SCaLE 20x --- Matthew Croughan#footnote[https://www.youtube.com/watch?v=6Le0IbPRzOE]
 	- Nix is a better Docker image builder than Docker's image builder --- Xe Iaso#footnote[https://xeiaso.net/talks/2024/nix-docker-build/]
 	- SLSA demo --- Tomberek#footnote[https://www.youtube.com/watch?v=dT0DGVbD-5M&t=985s]
