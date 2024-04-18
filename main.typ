@@ -103,34 +103,51 @@
 #slide[
 	== Nix
 
-	- Reproducible dev env // 1 min
+	- Reproducible development environment // 1 min
+		- They can have any package inside it
 	- Reproducible packages // 2 min
-	- On Debian // 1 min
+		- You can figure out what its dependencies are
+		- You can figure out what its _build_ dependencies are
+			- You can produce SBOM files from that
+		- You can copy the package on any system that has Nix installed
+		- It works on any Linux distribution
 	- Reproducible Docker images // 2 min
+		- Since you know all your runtime dependencies, you can produce minimal container images, without having to install a Linux distribution inside it
 ]
-
-// -> 6 min
 
 #slide[
 	== NixOS
 
 	- Declarative configuration // 1 min
+		- Say what you want in your Linux machine
+		- Any setting removed from the configuration, gets removed from the system
 	- Rollbacks // 1 min
-	- Build VMs // 2 min
-	- Build Docker images and more // 1 min
-	- Offline machines // 2 min
+		- You can go back to any previous configuration, completely offline
+	- Build VMs, Docker images, and more // 3 min - skip
+		- Since the configuration _is_ the system, you can produce VMs, Docker images, etc. to test your configuration before deploying
+	- Offline machines // 2 min - skip, only explain
+		- You can build the configuration, such as including new software, on a separate machine
+		- Then you can deploy it on an offline machine
 ]
 
 #slide[
 	== NixOS tests
 
-	Cool VM tests:
+	- Test of OpenArena, a first person shooter game
+		+ Start 3 VMs: a game server, and 2 clients
+		+ Wait for the machines to boot, and for the game server to start
+		+ Start the game on the 2 clients, and connect them to the server
+		+ Disconnect the "ethernet cable" of client1, wait for 10 seconds, and reconnect
+		- Make screenshots throughout the process
 
-	- Test of OpenArena
 	- BitTorrent test
+		+ Start 4 VMs: a tracker in VLAN 1, a router in VLAN 1 & 2, a client in VLAN 1, and a client in VLAN 2
+		+ Make client1 download a torrent from the tracker
+		+ We stop the tracker
+		+ Make client2 download a torrent from client1, through the router
 ] // 3 min
 
-// -> 10 min
+#slide(align(horizon, figure(image("bittorrent.svg", height: 50%), caption: [BitTorrent test setup])))
 
 #section-slide[= Software supply chain]
 
