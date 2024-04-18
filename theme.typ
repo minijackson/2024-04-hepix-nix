@@ -26,7 +26,7 @@
 	aspect-ratio: "16-9",
 	body,
 ) = {
-	set text(size: 22pt, font: "Libertinus Serif")
+	set text(size: 21pt, font: "Libertinus Serif")
 	show raw: set text(font: "Fira Code")
 
 	set page(
