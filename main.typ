@@ -31,6 +31,8 @@
 
 	They are here:#footnote(link(slides))
 
+	You need to install Nix on your machine to run them.
+
 	#qrcode(slides, options: (scale: 3.0))
 ]
 
@@ -53,7 +55,7 @@
 #slide[
 	== The buzzwords slide
 
-	- Infrastructure as code
+	- Infrastructure as code (part of it)
 	- Reproducibility
 	- Software supply chain security (SLSA)
 	- Software Bill of Materials (SBOM)
@@ -143,6 +145,8 @@
 	- SLSA level 4 "for free"
 	- Fetch the source and patches of all your dependencies
 	- Reproducible (science!)
+	- Cache everything
+	- Mix and match old / new software
 ]
 
 #slide[
